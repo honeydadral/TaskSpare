@@ -1,0 +1,175 @@
+/* src/styles/main.css */
+
+/* === GLOBAL RESET & BODY FIX === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+  display: block;
+        place-items: normal;
+}
+#app{
+  display: block;
+    place-items: normal;
+}
+/* === CENTERED CONTAINER (this fixes the "left side" problem) === */
+.page-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === HEADER & NAV === */
+header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: center;        /* centers the links */
+  align-items: center;
+  gap: 30px;
+  padding: 1.2rem 0;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.router-link-active {
+  color: #e44d26;
+}
+
+/* === PRODUCTS PAGE === */
+.products-container {
+  padding: 3rem 0;
+}
+
+.products-container h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  color: #222;
+}
+
+/* Product Grid - Responsive & Centered */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  padding: 1rem 1rem 0.5rem;
+  font-size: 1.25rem;
+}
+
+.price {
+  padding: 0 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #e44d26;
+}
+
+.description {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #e44d26;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #c33d1f;
+}
+
+
+.view-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #e44d26;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0 0 16px 16px;
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background: #c33d1f;
+}
+/* Add this to your main.css or here for now */
+.product-detail { padding: 3rem 0; }
+.detail-content { display: flex; gap: 3rem; flex-wrap: wrap; }
+.detail-image { max-width: 400px; border-radius: 16px; }
+.info h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+.price { font-size: 2rem; color: #e44d26; font-weight: bold; }
+.add-to-cart-btn {
+  background: #e44d26;
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.back-btn { margin-bottom: 1rem; padding: 8px 16px; }
